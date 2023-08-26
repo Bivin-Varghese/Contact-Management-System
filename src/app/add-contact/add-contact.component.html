@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center mt-4">Add Contact</h2>
+
+            <p class="mt-3">Contact management software and CRM software are both related in that they help you organize
+                contacts. A CRM is typically much broader in scope in terms of the functionality it offers. Although the
+                exact place where a contact manager becomes a CRM system is not clearly defined.
+
+                You should know that while contact management and CRM are different things, the two labels are sometimes
+                used interchangeably. This is due in part to their similarities.
+
+
+            </p>
+        </div>
+    </div>
+
+    <!-- add contact form  -->
+    <div class="row mt-5">
+
+        <!-- form  -->
+        <div class="col-6">
+            <!-- <pre>{{contact|json}}</pre> -->
+            <form action="" class="border border p-3 rounded">
+                <!-- Id  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.id" name="contactid" type="text" class="form-control" placeholder="Id">
+                    <label>Contact Id</label>
+                </div>
+
+                <!-- name  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.name" name="contactName" type="text" class="form-control"
+                        placeholder="Name">
+                    <label>Name</label>
+                </div>
+
+                <!-- photo url  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.photo" name="PhotoUrl" type="" class="form-control" placeholder="Name">
+                    <label>Photo url</label>
+                </div>
+
+                <!-- phone number  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.phone" name="phoneNum" type="" class="form-control" placeholder="Name">
+                    <label>Phone number</label>
+                </div>
+
+                <!-- Email address  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.email" name="email" type="" class="form-control" placeholder="Name">
+                    <label>Email address</label>
+                </div>
+
+                <!-- Company name  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.company" name="companyName" type="" class="form-control"
+                        placeholder="Name">
+                    <label>Company name</label>
+                </div>
+
+                <!-- title  -->
+                <div class="form-floating mb-3">
+                    <input [(ngModel)]="contact.title" name="title" type="text" class="form-control" placeholder="Name">
+                    <label>Title</label>
+                </div>
+
+                <!-- select a group -->
+                <div class="mb-3">
+                    <select [(ngModel)]='contact.groupId' name="contactId" class="form-control">
+                        
+                        <option  name='contactId' selected hidden disabled>{{contact.groupId}}</option>
+                        <option [value]=group.id *ngFor="let group of allGroups">{{group.name}}</option>
+
+                    </select>
+                </div>
+
+                <button (click)="addContact()" class="btn btn-success">Add Contact</button>
+                <button routerLink="" class="btn btn-danger float-end">Close</button>
+
+            </form>
+
+
+
+        </div>
+
+        <!-- image  -->
+        <div class="col-6">
+            <img src="https://us.123rf.com/450wm/molokowall/molokowall2202/molokowall220200045/182272791-young-smiling-woman-jane-sitting-with-crossed-legs-holding-a-laptop-freelance-studying-online.jpg?ver=6"
+                alt="">
+        </div>
+    </div>
+</div>

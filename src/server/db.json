@@ -1,0 +1,58 @@
+{
+  "contacts": [
+    {
+      "id": "c1",
+      "name": "Aparna",
+      "phone": "9954857756",
+      "email": "aparma@gmail",
+      "photo": "https://static.vecteezy.com/system/resources/thumbnails/010/807/094/small_2x/man-employee-profession-free-vector.jpg",
+      "company": "bb tech",
+      "title": "software engineer",
+      "groupId": "2"
+    },
+    {
+      "id": "c2",
+      "name": "Manu",
+      "phone": "9954445557",
+      "email": "manu@gmail",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6BA6rowuGs7whsI0daknQpo7HuXfbu6ZWCw&usqp=CAU",
+      "company": "manu tech",
+      "title": "software engineer lead",
+      "groupId": "1"
+    },
+    {
+      "id": "c3",
+      "name": "Hari",
+      "phone": "9954446688",
+      "email": "hari@gmail",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTB5aypLeKOlLnBk06F5u53Ef-9m16x-GVVQ&usqp=CAU",
+      "company": "hari tech",
+      "title": "devops",
+      "groupId": "3"
+    },
+    {
+      "id": "c4",
+      "name": "chinju m",
+      "phone": "9954800006",
+      "email": "chinju@gmail",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxGuYQUc4l_d9ua1E_XAo0poY82ZT-comOQYB6YKvmcjewwbafZQZPRFjB6fjUIH24jeA&usqp=CAU",
+      "company": "chinju solutions ",
+      "title": "CTO",
+      "groupId": "2"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "family"
+    },
+    {
+      "id": "2",
+      "name": "friends"
+    },
+    {
+      "id": "3",
+      "name": "company"
+    }
+  ]
+}

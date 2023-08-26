@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <h2 class="text-center mt-4">Contact Management System</h2>
+
+            <p class="mt-3">Contact management software and CRM software are both related in that they help you organize
+                contacts. A CRM is typically much broader in scope in terms of the functionality it offers. Although the
+                exact place where a contact manager becomes a CRM system is not clearly defined.
+
+                You should know that while contact management and CRM are different things, the two labels are sometimes
+                used interchangeably. This is due in part to their similarities.
+
+                Here is a look at some of the differences between contact management and CRM.
+            </p>
+
+            <a style="float: right;" routerLink="/contact/add" class="btn btn-secondary  ">Add
+                <i class="fa-solid fa-user-plus fa-beat" style="color: #fcfcfc;"></i></a>
+
+
+        </div>
+    </div>
+
+    <!-- {{allContacts | json}} -->
+    <!-- {{heading}} -->
+    <div class="row">
+        <div class="col-6">
+            <!-- search cotact  -->
+            <!-- <input (change) = "nameChange()" class="form-control mt-5 " type="text" placeholder="Search Your Contact"> -->
+            <input (keyup)="search($event)" class="form-control mt-5 " type="text" placeholder="Search Your Contact">
+        </div>
+    </div>
+
+    <!-- card design  -->
+
+    <div class="row mt-5">
+        <div class="col-6" *ngFor="let contact of allContacts | filter:searchkey:'name' "> <!--structural directives -->
+            <div class="card mt-5 bg-secondary">
+                <div class="card-body " style="height: 220px;">
+                    <div class="row">
+                        <!-- img  -->
+                        <div class="col-5">
+                            <img class="w-100" [src]="contact.photo" alt="">
+                        </div>
+                        <!-- contact details  -->
+                        <div class="col-7">
+                            <ul class="list-group list-group-flush mt-4">
+                                <li class="list-group-item">
+                                    Name: {{contact.name}}
+                                    <a routerLink="/contact/view/{{contact.id}}"><i class="fa-solid fa-eye float-end"
+                                            style="color: #000000;"></i></a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    Mobile:{{contact.phone}}
+                                    <a routerLink="/contact/update/{{contact.id}}">
+                                        <i class="fa-sharp fa-solid fa-pencil float-end"></i>
+                                    </a>
+
+                                </li>
+
+                                <li class="list-group-item">Email: {{contact.email}}
+                                    <a (click)="deleteContact(contact.id)">
+
+                                        <i class="fa-sharp fa-solid fa-trash float-end"></i>
+                                    </a>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

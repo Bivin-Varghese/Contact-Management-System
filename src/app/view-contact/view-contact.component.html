@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center mt-4">View Contact</h2>
+
+            <p class="mt-3">Contact management software and CRM software are both related in that they help you organize
+                contacts. A CRM is typically much broader in scope in terms of the functionality it offers. Although the
+                exact place where a contact manager becomes a CRM system is not clearly defined.
+
+                You should know that while contact management and CRM are different things, the two labels are sometimes
+                used interchangeably. This is due in part to their similarities.
+
+
+            </p>
+        </div>
+    </div>
+
+    <!-- <pre>
+        {{contact|json}}
+    </pre> -->
+
+    <!-- add contact form  -->
+    <div class="row mt-5">
+
+        <!-- form  -->
+        <div class="col-6">
+            <ul class="list-group">
+                <li class="list-group-item active bg-secondary" aria-current="true">Contact Details</li>
+                <li class="list-group-item">Id:{{contact.id}}</li>
+                <li class="list-group-item">Name: {{contact.name}}</li>
+                <li class="list-group-item">Phone No: {{contact.phone}}</li>
+                <li class="list-group-item">Email: {{contact.email}}</li>
+                <li class="list-group-item">Company: {{contact.company}}</li>
+                <li class="list-group-item">Title: {{contact.title}}</li>
+                <li class="list-group-item">Group: {{groupName}}</li>
+              </ul>
+        </div>
+
+        <!-- image  -->
+        <div class="col-6">
+            <img [src] ="contact.photo">
+                
+        </div>
+    </div>
+    <button class="btn btn-secondary mb-5 " routerLink="">Go Back</button>
+</div>
+
